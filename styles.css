@@ -1,0 +1,54 @@
+body {
+    background: #171414;
+    background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(15, 24, 59, 1) 100%);
+    
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+h3 {
+    color: white;
+}
+
+p:not(#textu_dialog) {
+    color: white;
+}
+
+button:not(#itxi) {
+    border-radius: 8px;
+    border-color: wheat;
+    background-color: transparent;
+    color: white;
+    transition: transform 0.3 ease;
+}
+
+button {
+    cursor: pointer;
+}
+button:hover {
+    transform: scale (1.2);
+}
+#info_botoia {
+    display: block;
+    border-radius: 8px;
+
+}
+
+.pelikulak {
+    display: block;
+    text-align: center;
+}
+
+dialog {
+    border-radius: 8px;
+    border-color: antiquewhite;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    
+}
+

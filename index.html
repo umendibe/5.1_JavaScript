@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript hasiera">
+    <meta name="author" content="Urko Mendibe">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>ZINEMAUSURBIL</h1>
+    </header>
+    <main>
+        <dialog id="dialogoa">
+            <p id="textu_dialog">Ongi etorri ZinemaUsurbilera!</p>
+            <button id="itxi">Itxi</button>
+        </dialog>
+
+
+        <button id="Agurra">Agurra</button>
+        <h3 id="demo">Hemen guri buruzko informazioa agertuko da "Informazioa" botoia sakatuz gero.</h3>
+        <button id="info_botoia" type="button"
+            onclick="document.getElementById('demo').innerHTML = 'Usurbilen kokatutako Zinema gara, Urbil merkataritza gunean zehazki- '">Informazioa</button>
+        <div class="pelikulak">
+            <h3>Pelikulak</h3>
+            <button onclick="botoiak1()">Aurreko pelikula</button>
+            <img id="myImage" src="img/lilo&stich2.png">
+            <button onclick="botoiak2()">Hurrengo pelikula</button>
+        </div>
+        <br>
+        <br>
+        <p>Gelen aforoa</p>
+        <progress id="bar" max="100" value="0"></progress>
+
+    </main>
+    <footer></footer>
+    <script>
+        function botoiak1() {
+            document.getElementById('myImage').src = 'img/mision_imposible2.png';
+        }
+
+        function botoiak2() {
+            document.getElementById('myImage').src = 'img/padre_no_hay_mas_que_uno2.png';
+        }
+    </script>
+    <script>
+        Agurra.onclick = () => dialogoa.showModal();
+        itxi.onclick = () => dialogoa.close();
+    </script>
+    <script>
+        const bar = document.getElementById('bar');
+
+        let value = 0;
+        const interval = setInterval(() => {
+            value += 1;
+            if (value > 100) {
+                clearInterval(interval);
+                value = 100;
+            }
+            bar.value = value;
+        }, 500);             
+    </script>
+</body>
+
+</html>
